@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">    
+
+    <title>Form Validation</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <h1>Register With Us</h1>
+        </div>
+        <div class="form-container">
+            <form  id="form" onsubmit="return matchPassword();">
+                <fieldset class="control">
+                    <label for="full-name">Full Name: <input type="text" name="full-name" id="full-name" placeholder="Enter Full Name-  5 characters min"  onchange="checkNames(this.value)" pattern=".{5,}" ><small>Error Message</small></label>
+                    
+                </fieldset>
+                <fieldset class="control">
+                    <label for="email-id">Email ID: <input type="email" name="email-id" id="email-id" placeholder="Enter Email Address" onchange="checkEmails(this.value)" ><small>Error Message</small></label>
+                </fieldset>
+                <fieldset class="control">   
+                    <label for="phone-number">Phone Number: <input type="tel" name="phone-number" id="phone-number" placeholder="+1(123) 456-7890" pattern=".{10,}" onchange="checkPhones(this.value)"><small>Error Message</small></label>
+                </fieldset>
+                <fieldset class="control">
+                    <label for="pwd">Create Password: <input type="password" name="pwd" id="password" placeholder="Enter Password: (a-z, A-Z, 0-9) min 8 char" pattern="[a-zA-Z0-9]{8,}" onchange="checkPasss(this.value)"> <small>Error Message</small></label>
+                </fieldset>
+                <fieldset class="control">    
+                    <label for="cpwd">Confirm Password: <input type="password" name="cpwd" id="confirmpassword" placeholder="Confirm Password" onchange="checkCPasss(this.value)"><small>Error Message</small></label>
+                </fieldset>
+                <fieldset class="control">
+                    <label for="gender">Gender:
+                        <label for="male"> <input type="radio" name="gender" id="male"> Male</label> <label for="female"> <input type="radio" name="gender" id="female"> Female</label> <label for="others"><input type="radio" name="gender" id="others"> Others</label>
+                    </label>
+                </fieldset> 
+                <fieldset class = "submit">
+                    <input type="submit" value="Submit">
+                </fieldset>   
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

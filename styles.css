@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    
+    background-image: url(backgroundimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.692);
+    background-blend-mode: overlay;
+}
+
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    position: relative;
+    
+    
+}
+
+.container>h1{
+   
+    font-size: 2.3vw;
+    color: rgb(255, 242, 219);
+    animation-duration: 0.5s;
+    animation-name: animate-fade-pop;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    max-width: 1000px;
+    min-width: 300px;
+    text-align: center;
+    margin: 0.3em auto;
+}
+
+label,input{
+    display: block;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.form-container{
+    width: 60%;
+    height: max-content;
+    
+    background-color: rgba(95, 95, 95, 0.474);
+    max-width: 1000px;
+    min-width: 3vw;
+    border: none;
+    border-radius: 20px;
+    animation-duration: 0.5s;
+    animation-name: animate-fade-pop;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+.form-container label{
+    font-size: 0.99vw;
+    color: antiquewhite;
+}
+.form-container input{
+    height: 2vw;
+    background-color:rgba(95, 95, 95, 0.633); 
+    border: none;
+    color: antiquewhite;
+}
+.form-container input[type= "radio"]{
+    height: 0.8vw;
+    width: unset;
+    margin: 0 0.5em 0 0.5em;
+    vertical-align:middle;
+    display: inline;
+    cursor: pointer;
+}
+
+.form-container label:hover{
+    transform: scale(1.03,1.03);
+    transition: ease 600ms;
+}
+.form-container input:hover{
+    transform: scale(1.01,1.01);
+    transition: ease 600ms;
+}
+.form-container input[type= "radio"]:hover{
+    transform: scale(1.3,1.3);
+    transition: ease 600ms;
+}
+
+input[type = "submit"]{
+    height: 3vw;
+    border: none;
+    border-radius: 30px;
+    width: 30%;
+    text-align: center;
+    margin: 0.5em auto;
+    color: antiquewhite;
+    font-size: 1.1vw;
+    cursor: pointer;
+}
+/*success color = #23cc71 */
+
+.control small{
+    color: #e74c3c;     
+    position: absolute;
+    margin: 0;
+    padding: 0; 
+    visibility: hidden;
+     
+}
+
+.control.success input{
+    border: 1px solid;
+    border-color:#23cc71 ;
+}
+
+.control.error input{
+    border: 1px solid;
+    border-color: #e74c3c;
+}
+
+.control.error small{
+    visibility:visible;
+}
+
+@keyframes animate-fade-pop{
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+      }
+    
+      100% {
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
